@@ -382,7 +382,7 @@ class Collection
             $productsToProcess,
             'variants/product',
             $info,
-            ['isSingleProduct' => CriteriaCheck::isSingleProductFilter($this->searchCriteria)]
+            ['isSingleProduct' => CriteriaCheck::isSingleProductFilter($this->searchCriteria),'isCartProduct'=> CriteriaCheck::isCartProduct($this->searchCriteria)]
         );
 
         foreach ($this->parentProducts as $product) {

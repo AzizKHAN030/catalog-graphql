@@ -32,7 +32,19 @@ class CriteriaCheck
                 }
             }
         }
-        
+
+        return false;
+    }
+
+    /**
+     * @param SearchCriteriaInterface $searchCriteria
+     * @return bool
+     */
+    static public function isCartProduct(SearchCriteriaInterface $searchCriteria)
+    {
+        if(!$searchCriteria->getFilterGroups()){
+            return true;
+        }
         return false;
     }
 
